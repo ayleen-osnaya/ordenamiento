@@ -21,7 +21,7 @@ vector<string> cargarVector(string nombreArchivo) {
     return contenido;
 }
 
-int numMes(string mes) {
+int mesNum(string mes) {
     if (mes == "Jan") return 1;
     if (mes == "Feb") return 2;
     if (mes == "Mar") return 3;
@@ -35,6 +35,17 @@ int numMes(string mes) {
     if (mes == "Nov") return 11;
     if (mes == "Dec") return 12;
     return 0;
+}
+
+string numMes(int num) {
+    string meses[12] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+
+    if (num >= 1 && num <= 12) {
+        return meses[num - 1];
+    } else {
+        return "mes invalido :(";
+    }
 }
 
 int main() {
