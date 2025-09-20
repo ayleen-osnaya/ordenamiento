@@ -1,3 +1,3 @@
-C:/Users/i5/Desktop/ordenamiento/cmake-build-debug/CMakeFiles/ordenamiento.dir
-C:/Users/i5/Desktop/ordenamiento/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/i5/Desktop/ordenamiento/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/aylee/CLionProjects/ordenamiento/cmake-build-debug/CMakeFiles/ordenamiento.dir
+C:/Users/aylee/CLionProjects/ordenamiento/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/aylee/CLionProjects/ordenamiento/cmake-build-debug/CMakeFiles/rebuild_cache.dir
