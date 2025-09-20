@@ -47,19 +47,5 @@ int main() {
     contenido = cargarVector("bitacora.txt");
 
 
-    //nota para mi: enseñar que tiene el archivo, borrar despues
-    for (int i = 0; i < contenido.size(); i++) {
-        cout << contenido[i] << endl;
-    }
-
-    //nota para mi: ver el funcionamiento de numMes, borrar despues
-
-    int numero = numMes(mes);
-    if (numero == 0) {
-        cout << "Mes invalido" << endl;
-    } else {
-        cout << "El mes " << mes<< " = " << numero << endl;
-    }
-
     return 0;
 }
