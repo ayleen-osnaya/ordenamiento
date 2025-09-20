@@ -38,18 +38,16 @@ int numMes(string mes) {
 }
 
 int main() {
-    // pedir al usuario el nombre del txt
-    string nombreArchivo;
-    cin >> nombreArchivo;
+
     // pedir al usuario mes (aun no tiene para fijar fecha de inicio y fin)
     string mes;
     cin >> mes;
 
     vector<string> contenido;
-    contenido = cargarVector(nombreArchivo);
+    contenido = cargarVector("bitacora.txt");
 
 
-   //nota para mi: enseñar que tiene el archivo, borrar despues
+    //nota para mi: enseñar que tiene el archivo, borrar despues
     for (int i = 0; i < contenido.size(); i++) {
         cout << contenido[i] << endl;
     }
