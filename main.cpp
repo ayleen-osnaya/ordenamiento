@@ -49,7 +49,6 @@ string numMes(int num) {
 }
 
 int main() {
-
     // pedir al usuario mes (aun no tiene para fijar fecha de inicio y fin)
     string mes;
     cin >> mes;
