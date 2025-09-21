@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <utility> 
 using namespace std;
 
 struct Registro {
@@ -78,7 +79,7 @@ bool cargarArchivo(string nombreArchivo, vector<Registro>& registros) {
         lectura.tiempo = tiempoT;
         lectura.ip = ipT;
         lectura.dia = diaT;
-        if (mensajeT[0] == ' ')
+        if (!mensajeT.empty() && mensajeT[0] == ' ')
             mensajeT.erase(0, 1);
         lectura.mensaje = mensajeT;
         //separar hora::minuto::segundo
@@ -94,11 +95,12 @@ bool cargarArchivo(string nombreArchivo, vector<Registro>& registros) {
     return true;
 }
 
-void swap(int& a, int& b) {
-    int temp = a;
-    a = b;
-    b = temp;
+inline void swapRegistro(Registro& x, Registro& y) {
+    Registro temp = x;
+    x = y;
+    y = temp;
 }
+
 
 // Partición de Lomuto para vector<Registro>, comparando por .clave
 int particion(vector<Registro>& a, int low, int high) {
@@ -107,10 +109,10 @@ int particion(vector<Registro>& a, int low, int high) {
     for (int j = low; j < high; ++j) {
         if (a[j].clave <= pivot) {    // orden ascendente por clave
             ++i;
-            swap(a[i], a[j]);    // swap de Registro completo
+            swapRegistro(a[i], a[j]);
         }
     }
-    swap(a[i + 1], a[high]);
+    swapRegistro(a[i + 1], a[high]);
     return i + 1;
 }
 
@@ -130,7 +132,7 @@ void buscarPorRango(const vector<Registro>& registros) {
 
     int mesInicioNum, mesFinNum, diaInicio, diaFin;
 
-    cout << "Ingrese la fecha inicial (mes dia, e.g., 6 10): ";
+    cout << "Ingrese la fecha inicial (mes dia, ejemplo: 6 10): ";
     if (!(cin >> mesInicioNum >> diaInicio)) {
         cerr << "Entrada invalida.\n";
         cin.clear();                // limpia el estado de error
