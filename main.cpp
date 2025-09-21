@@ -9,11 +9,6 @@ vector<string> cargarVector(string nombreArchivo) {
     vector<string> contenido;
     string linea;
 
-    if (!archivo) {
-        cout << "No se pudo abrir el archivo :(" << endl;
-        return contenido;
-    }
-
     while (getline(archivo, linea)) {
         contenido.push_back(linea);
     }
